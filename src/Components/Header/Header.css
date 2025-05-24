@@ -1,0 +1,27 @@
+.hero-wrapper {
+  background-image: url('../../assets//Images/banner.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+.container{
+    max-width: 1520px!important;
+}
+.top-bar {
+  font-size: 0.9rem;
+  background: linear-gradient(270deg, rgba(116, 107, 26, 0.12) 0%, rgba(116, 107, 26, 0.06) 100.08%);;
+}
+.top-menu{
+  color: #49517D;
+}
+
+.hero-wrapper h1, .hero-wrapper p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
