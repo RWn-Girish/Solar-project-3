@@ -1,0 +1,64 @@
+.testimonial-bg {
+  background-color: #fcfaf6;
+}
+
+.testimonial-box {
+  background-color: #f0f2f7;
+  border-radius: 16px;
+  padding: 48px 64px;
+  margin: 0 auto;
+  height: 350px;
+
+}
+
+.star-rating {
+  font-size: 24px;
+  color: #2c2e32;
+  margin-bottom: 10px;
+}
+
+.location {
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.review {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1d1d1f;
+}
+
+.carousel-controls .nav-btn {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding: 8px 12px;
+  font-size:24px;
+  font-weight: light;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.carousel-controls .nav-btn:hover {
+  background-color: #e4e4e4;
+}
+
+.dots {
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #2c2e32;
+}
