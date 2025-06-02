@@ -13,7 +13,7 @@ const Technology = () => {
                     </h1>
                 </div>
 
-                <Row className="align-items-center mb-5">
+                <Row className="d-flex align-items-center mb-5">
                     <Col md={6}>
                         <div className="tech-vdo">
                             <video
@@ -36,17 +36,17 @@ const Technology = () => {
                                 'transparent', border: '1px solid #1F2647' }}>Learn More</Button>
                     </Col>
                 </Row>
-               <Row className="align-items-center">
-                    <Col md={6} className="text-start">
-                        <div className="tech-content mb-3">
-                            <h1 className="display-4 fw-medium" style={{maxWidth:'80%'}}>Vehicle-to-home charging with Ford</h1>
-                            <p>
+               <Row className=" d-flex align-items-center ">
+                    <Col md={6} className="text-start ">
+                        <div className="tech-content mb-3 ms-5 ps-5">
+                            <h1 className="display-4 fw-medium " style={{maxWidth:'80%'}}>Vehicle-to-home charging with Ford</h1>
+                            <p className="">
                                 We partnered with Ford to create the Home Integration System, a
                                 first-of-its-kind technology that lets you power your life on and off the road.
-                            </p>
-                        </div>
+                            </p>                    
                     <Button variant="light" className="rounded-pill px-4 py-3 fs-6 fw-medium"style={{ color: '#1F2647', 
                     backgroundColor:'transparent', border: '1px solid #1F2647' }}> Learn More</Button>
+                     </div>
                     </Col>
                     <Col md={6}>
                         <div className="tech-img">

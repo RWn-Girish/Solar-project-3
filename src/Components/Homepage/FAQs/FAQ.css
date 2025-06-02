@@ -1,0 +1,65 @@
+.faq-section {
+  background-color: #0d0d0d;
+}
+
+.faq-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.accordion-button {
+  background-color: #000 !important;
+  color: #fff;
+  font-size: 1.05rem;
+  padding-left: 0;
+  box-shadow: none;
+  border-radius: 0 !important;
+}
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-body {
+  background-color: #000;
+  color: #ffffff;
+  padding-left: 2rem;
+}
+
+.faq-accordion-item .accordion-button {
+  background-color: transparent; 
+  color: white !important;
+  font-weight: 500;
+}
+.faq-accordion-item .accordion-button::after {
+  filter: brightness(0) invert(1); 
+}
+.faq-accordion-item .accordion-button:not(.collapsed) {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white !important;
+}
+.fa-icon-wrapper {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-icon {
+  color: black; 
+  font-size: 20px;
+}
+.faq-accordion-item .accordion-button {
+  font-size: 1.25rem !important; 
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: transparent;
+  color: #fff;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) .fa-icon {
+  transform: rotate(90deg);
+}

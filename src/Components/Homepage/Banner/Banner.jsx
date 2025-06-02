@@ -2,7 +2,7 @@ import React from 'react';
 import { Container,  Navbar, Nav, Button } from 'react-bootstrap';
 import { FaLocationDot, FaPhone } from 'react-icons/fa6';
 import logo from'../../../assets/Images/logo.png';
-import '../../Header/Header.css'
+import './Banner.css'
 
 function BannerComp() {
   return (

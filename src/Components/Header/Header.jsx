@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Navbar, Nav, Button } from 'react-bootstrap';
 import { FaLocationDot, FaPhone } from 'react-icons/fa6';
-import logo from'../../assets/Images/logo.svg';
-import './Header.css'
+import logo from'../../assets/Images/logo2.png';
+// import './Header.css'
 
 function Header() {
   return (

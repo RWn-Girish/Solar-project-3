@@ -8,9 +8,10 @@ import { Route, Routes } from "react-router";
 import Plans from "./Plans/Plans";
 import AppComp from "./APPpromo/AppComp";
 import Customer from "./Customer/Customer";
-// import Review from "./Customer/Review";
 import TestimonialCarousel from "./Customer/Testimonial";
 import Technology from "./Technology/Technology";
+import Awards from "./Awards/Awards";
+import FAQ from "./FAQs/Faq";
 
 const Homepage=()=>{
     return(
@@ -26,6 +27,8 @@ const Homepage=()=>{
       <Customer/>
       <TestimonialCarousel/>
       <Technology/>
+      <Awards/>
+      <FAQ/>
         </>
     )
 }
