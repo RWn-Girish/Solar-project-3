@@ -12,6 +12,7 @@ import TestimonialCarousel from "./Customer/Testimonial";
 import Technology from "./Technology/Technology";
 import Awards from "./Awards/Awards";
 import FAQ from "./FAQs/Faq";
+import ModernLiving from "./Modern/Modern";
 
 const Homepage=()=>{
     return(
@@ -29,6 +30,7 @@ const Homepage=()=>{
       <Technology/>
       <Awards/>
       <FAQ/>
+      <ModernLiving/>
         </>
     )
 }
