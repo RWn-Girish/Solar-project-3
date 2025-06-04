@@ -32,7 +32,7 @@ function Header() {
           <Navbar.Toggle aria-controls="main-navbar" />
           <Navbar.Collapse id="main-navbar" className="justify-content-between">
             <Nav className="mx-auto">
-           <Nav.Link href="/Plans&Pricing" className="text-black fw-medium mx-3">Plans & Pricing</Nav.Link>
+           <Nav.Link href="/solar-plans-and-services" className="text-black fw-medium mx-3">Plans & Pricing</Nav.Link>
               <Link><Nav.Link href='/products' className="text-black fw-medium mx-3">Products</Nav.Link></Link>
              <Link> <Nav.Link href='/learn' className="text-black fw-medium mx-3">Learn</Nav.Link></Link>
               <Link><Nav.Link href='/company' className="text-black fw-medium mx-3">Company</Nav.Link></Link>

@@ -1,7 +1,8 @@
 .hero-wrapper {
-  background-image: url('../../../assets/Images/banner.webp');
+  background-image: url('../../../assets/Images/Plan-img-1.webp');
   background-size: cover;
   background-position: center;
+  margin-top:  1px;
   height: 100vh;
   position: relative;
 }

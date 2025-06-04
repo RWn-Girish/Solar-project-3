@@ -15,7 +15,7 @@ function App() {
       <Header/>
         <Routes>
           <Route path='/'element={<Homepage/>} />
-          <Route path='/plans&pricing' element={<PlanPage/>} />
+          <Route path='/solar-plans-and-services' element={<PlanPage/>} />
           {/* <Route path='/products' element={<Products/>} /> */}
           {/* <Route path='/learn' element={<Learn/>} /> */}
           {/* <Route path='/company' element={<Company/>} /> */}
