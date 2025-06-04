@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Navbar, Nav, Button } from 'react-bootstrap';
 import { FaLocationDot, FaPhone } from 'react-icons/fa6';
 import logo from'../../assets/Images/logo2.png';
+import { Link } from 'react-router';
 // import './Header.css'
 
 function Header() {
@@ -31,10 +32,10 @@ function Header() {
           <Navbar.Toggle aria-controls="main-navbar" />
           <Navbar.Collapse id="main-navbar" className="justify-content-between">
             <Nav className="mx-auto">
-              <Nav.Link href="#" className="text-black fw-medium mx-3">Plans & Pricing</Nav.Link>
-              <Nav.Link href="#" className="text-black fw-medium mx-3">Products</Nav.Link>
-              <Nav.Link href="#" className="text-black fw-medium mx-3">Learn</Nav.Link>
-              <Nav.Link href="#" className="text-black fw-medium mx-3">Company</Nav.Link>
+           <Nav.Link href="/Plans&Pricing" className="text-black fw-medium mx-3">Plans & Pricing</Nav.Link>
+              <Link><Nav.Link href='/products' className="text-black fw-medium mx-3">Products</Nav.Link></Link>
+             <Link> <Nav.Link href='/learn' className="text-black fw-medium mx-3">Learn</Nav.Link></Link>
+              <Link><Nav.Link href='/company' className="text-black fw-medium mx-3">Company</Nav.Link></Link>
             </Nav>
             <Button variant="light" className="rounded-pill px-4 text-white" style={{backgroundColor:'#1F2647'}}>Get a quote</Button>
           </Navbar.Collapse>
