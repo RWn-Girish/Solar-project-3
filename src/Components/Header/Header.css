@@ -17,3 +17,47 @@
   z-index: 999;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 } 
+.custom-dropdown {
+  width: 100%;
+}
+.mega-dropdown {
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-top: 1px solid #dee2e6;
+  z-index: 1050;
+}
+
+.mega-dropdown-img {
+  width: 100%;
+  object-fit: cover;
+  height: 250px;
+  border-radius: 12px;
+}
+
+.mega-dropdown-full {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  background-color: white;
+  border-top: 1px solid #dee2e6;
+  z-index: 1050;
+}
+
+
+.mega-dropdown-full img {
+  width: 80%;
+  object-fit: cover;
+  height: 300px;
+  border-radius: 12px;
+}
+.mega-dropdown-full {
+  top: 100%;
+  left: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+.mega-dropdown-full {
+  transition: all 0.3s ease;
+}

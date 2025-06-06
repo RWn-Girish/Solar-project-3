@@ -9,7 +9,7 @@ function BannerComp() {
     <>
     <div className="hero-wrapper text-white">
   <Container className='container'>
-      <div className="top-bar py-3  d-flex justify-content-between align-items-center bg-transparent text-white">
+      {/* <div className="top-bar py-3  d-flex justify-content-between align-items-center bg-transparent text-white">
         <Nav.Link className="d-flex align-items-center nav-link">
           <FaLocationDot className='me-2 fs-4' />
           <span className='fw-medium'>Enter your location</span>
@@ -37,7 +37,7 @@ function BannerComp() {
             <Button variant="light" className="rounded-pill px-4">Get a quote</Button>
           </Navbar.Collapse>
         
-      </Navbar>
+      </Navbar> */}
        <div  className="d-flex  align-items-center" style={{height:'80vh'}}>
   <div className="text-left" style={{ maxWidth: '600px' }}>
     <h1 className="display-1 fw-semibold pt-5">Power Life on Your Terms</h1>

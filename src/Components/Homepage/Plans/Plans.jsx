@@ -3,6 +3,7 @@ import {  Button } from 'react-bootstrap';
 import './plans.css';
 import planImg from '../../../assets/Images/plans.webp'; 
 import { FaSun } from 'react-icons/fa';
+import CustomButton from '../../ButtonComp';
 
 const Plans = () => {
   return (
@@ -21,9 +22,7 @@ const Plans = () => {
           <li className='mb-2'><FaSun className='me-2' /> Industry-leading equipment guarantee</li>
           <li className='mb-2'><FaSun className='me-2' /> Predictable monthly payments with locked-in rates</li>
         </ul>
-        <Button variant="outline-light" className="rounded-pill px-4 py-3 mt-3">
-          Compare plans
-        </Button>
+        <CustomButton text="Compare plans"  className="mt-3" />
       </div>
     </div>
   );

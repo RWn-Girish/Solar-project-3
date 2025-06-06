@@ -1,26 +1,27 @@
 import React from 'react';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
-import {
-  FaFacebookF,FaTwitter,FaInstagram,FaLinkedinIn,FaMapMarkerAlt,} from 'react-icons/fa';
 import'./Footer.css'
+import { FaFacebook, FaLinkedin,FaInstagram, FaLocationDot, FaXTwitter } from 'react-icons/fa6';
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light pt-5 pb-3 mt-5">
+    <>
+    <div className='py-5 bg-black'>
+      <footer className="bg-black text-light pt-5 pb-3 mt-3 ">
       <Container>
         <Row className="mb-4">
-          <Col xs={6} md={2}>
-            <h6 className="text-uppercase mb-3">Products</h6>
-            <Nav className="flex-column ">
-              <Nav.Link href="#" className='text-decoration-none display-6'>Plans & Pricing</Nav.Link>
-              <Nav.Link href="#" className='text-decoration-none display-6'>Learn</Nav.Link>
-              <Nav.Link href="#" className='text-decoration-none display-6'>Company</Nav.Link>
-              <Nav.Link href="#" className='text-decoration-none display-6'>Investors</Nav.Link>
+          <Col xs={6} md={3}>
+            <Nav className="flex-column me-5">
+              <Nav.Link href="#" className='text-decoration-none display-6 border-bottom'><h5>Products</h5></Nav.Link>
+              <Nav.Link href="#" className='text-decoration-none display-6 border-bottom'><h5>Plans & Pricing</h5></Nav.Link>
+              <Nav.Link href="#" className='text-decoration-none display-6 border-bottom'><h5>Learn</h5></Nav.Link>
+              <Nav.Link href="#" className='text-decoration-none display-6 border-bottom'><h5>Company</h5></Nav.Link>
+              <Nav.Link href="#" className='text-decoration-none display-6 border-bottom'><h5>Investors</h5></Nav.Link>
             </Nav>
           </Col>
 
-          <Col xs={6} md={3}>
-            <h6 className="text-uppercase mb-3">Meet Sunrun</h6>
-            <Nav className="flex-column">
+          <Col xs={6} md={2}>
+            <h6 className="text-uppercase mb-3 ms-5">Meet Sunrun</h6>
+            <Nav className="flex-column ms-5">
               <Nav.Link href="#">Why Sunrun</Nav.Link>
               <Nav.Link href="#">Our Guarantee</Nav.Link>
               <Nav.Link href="#">Sunrun Impact</Nav.Link>
@@ -51,37 +52,51 @@ const Footer = () => {
             </Nav>
           </Col>
 
-          <Col xs={12} md={3} className="text-md-end mt-4 mt-md-0">
-            <div className="d-flex justify-content-md-end gap-3">
-              <a href="#"><FaFacebookF color="lightgray" /></a>
-              <a href="#"><FaTwitter color="lightgray" /></a>
-              <a href="#"><FaInstagram color="lightgray" /></a>
-              <a href="#"><FaLinkedinIn color="lightgray" /></a>
+          <Col xs={12} md={3} className="text-md-end  mt-md-0">
+            <div className="d-flex justify-content-md-end gap-4 " style={{fontSize:"22px" ,color:'#C3DBFF'}}>
+              <a href="#"><FaFacebook  /></a>
+              <a href="#"><FaXTwitter  /></a>
+              <a href="#"><FaInstagram  /></a>
+              <a href="#"><FaLinkedin  /></a>
             </div>
           </Col>
         </Row>
-
-        <hr className="border-light" />
-
-        <Row className="text-muted small">
-          <Col xs={12} md={9}>
-            <div className="d-flex flex-column flex-md-row gap-3">
-              <a href="#">Seamless integration solar battery storage</a>
-              <a href="#">Latest technology solar panels</a>
-              <a href="#">Tesla Powerwall quote</a>
-            </div>
-            <div className="mt-2 d-flex align-items-center gap-2">
-              <FaMapMarkerAlt />
-              <span>Enter your location</span>
-            </div>
-            <div>© 2025 Sunrun. All Rights Reserved</div>
-          </Col>
-          <Col xs={12} md={3} className="text-md-end">
-            <a href="#">State Contractor License</a> / <a href="#">Terms</a> / <a href="#">Privacy Policy</a> / <a href="#">Manage Cookies</a> / <a href="#">Your Privacy Choices</a>
+<Row className="mb-2">
+          <Col md={12} className="d-flex flex-wrap gap-3 small my-4">
+            <span className="fw-semibold ">Popular pages</span>
+            <a href="#" className=" text-decoration-underline" style={{color:'#C3DBFF' ,fontSize:"14px"}}>Seamless integration solar battery storage</a>
+            <a href="#" className=" text-decoration-underline" style={{color:'#C3DBFF', fontSize:"14px"}}>Latest technology solar panels</a>
+            <a href="#" className=" text-decoration-underline" style={{color:'#C3DBFF' ,fontSize:"14px"}}>Tesla Powerwall solar battery and backup quote</a>
           </Col>
         </Row>
+
+        <Row className="justify-content-between align-items-center small">
+          <Col xs="auto" className="d-flex align-items-center gap-4 fs-6">
+            <div className="d-flex gap-2 fs-6"style={{color:'#C3dbff'}}>
+              <FaLocationDot  style={{fontSize:"24px"}}/>
+            <span>Enter your location</span>
+            </div>
+            <span>© 2025 Sunrun. All Rights Reserved</span>
+          </Col>
+
+          <Col xs="auto" className="d-flex flex-wrap gap-2 justify-content-end">
+            <a href="#" className="text-light text-decoration-underline">State Contractor License</a>
+            <span>/</span>
+            <a href="#" className="text-light text-decoration-underline">Terms</a>
+            <span>/</span>
+            <a href="#" className="text-light text-decoration-underline">Privacy Policy</a>
+            <span>/</span>
+            <a href="#" className="text-light text-decoration-underline">Manage Cookies</a>
+            <span>/</span>
+            <a href="#" className="text-light text-decoration-underline">Your Privacy Choices</a>
+            <span style={{ fontSize: '0.7rem' }}>🔘✖️</span>
+          </Col>
+        </Row>
+        
       </Container>
     </footer>
+    </div>
+    </>
   );
 };
 

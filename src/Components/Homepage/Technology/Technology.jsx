@@ -1,6 +1,7 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import Techvdo from '../../../assets/Images/Videos/tech.mp4';
 import Techimg from '../../../assets/Images/tech-img.webp';
+import CustomButton from "../../ButtonComp";
 
 
 const Technology = () => {
@@ -32,8 +33,8 @@ const Technology = () => {
                             <h1 className="display-4 fw-medium" style={{maxWidth:'80%'}}>Introducing the Tesla Powerwall 3</h1>
                             <p className="fs-6 text-secondary" style={{maxWidth:'50%'}}>Stay powered through outages and peak hours with seamless  
                                 solar integration.</p></div>
-                            <Button variant="light"className="rounded-pill px-4 py-3 fs-6 fw-medium"style={{ color: '#1F2647', backgroundColor:   
-                                'transparent', border: '1px solid #1F2647' }}>Learn More</Button>
+                            <CustomButton text="Learn More" variant="light"className="fs-6 fw-medium"style={{ color: '#1F2647',
+                                 backgroundColor: 'transparent', border: '1px solid #1F2647' }} />
                     </Col>
                 </Row>
                <Row className=" d-flex align-items-center ">
@@ -44,8 +45,8 @@ const Technology = () => {
                                 We partnered with Ford to create the Home Integration System, a
                                 first-of-its-kind technology that lets you power your life on and off the road.
                             </p>                    
-                    <Button variant="light" className="rounded-pill px-4 py-3 fs-6 fw-medium"style={{ color: '#1F2647', 
-                    backgroundColor:'transparent', border: '1px solid #1F2647' }}> Learn More</Button>
+                    <CustomButton text="Learn More" variant="light"className="fs-6 fw-medium"style={{ color: '#1F2647', 
+                             backgroundColor: 'transparent',  border: '1px solid #1F2647' }} />
                      </div>
                     </Col>
                     <Col md={6}>

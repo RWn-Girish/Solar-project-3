@@ -1,5 +1,6 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import customer from '../../../assets/Images/Videos/customer.mp4'
+import CustomButton from "../../ButtonComp";
 const Customer=()=>{
     return(
         <>
@@ -11,7 +12,7 @@ const Customer=()=>{
             <h2 className="text-white display-3 fw-semibold">Drew's gone solar</h2>
             <p className="text-secondary fs-5 fw-semibold" style={{maxWidth:'80%'}}>Join Drew Scott to learn why he went solar and why it’s one of 
                 the biggest home improvements he’s ever made.</p>
-            <Button variant="outline-light" className="rounded-pill px-4 py-3 fs-6 fw-medium">Watch now</Button>
+            <CustomButton text="Watch now" className="fs-6 fw-medium" />
             </Col>
             <Col md={6}>
                 <video  autoPlay muted loop playsInline style={{ width: '100%', borderRadius: '12px' }}>

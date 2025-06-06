@@ -1,6 +1,7 @@
 import { Accordion, Button, Col, Container, Row } from "react-bootstrap";
 import { FaChevronRight } from "react-icons/fa";
 import "./FAQ.css";
+import CustomButton from "../../ButtonComp";
 
 const FAQ = () => {
   const faqs = [
@@ -52,7 +53,6 @@ const FAQ = () => {
     <Container style={{ width: "1320px" }}>
       <h1 className="faq-title mb-4">FAQs</h1>
       <Row>
-        {/* Left Column */}
         <Col md={6}>
           <Accordion flush alwaysOpen={false}>
             {faqs.slice(0, Math.ceil(faqs.length / 2)).map((faq, index) => (
@@ -78,8 +78,6 @@ const FAQ = () => {
             ))}
           </Accordion>
         </Col>
-
-        {/* Right Column */}
         <Col md={6}>
           <Accordion flush alwaysOpen={false}>
             {faqs.slice(Math.ceil(faqs.length / 2)).map((faq, index) => (
@@ -106,12 +104,9 @@ const FAQ = () => {
           </Accordion>
         </Col>
       </Row>
-
       <div className="d-flex justify-content-center align-items-center mt-4">
-        <span className="me-3 text-secondary fs-6 fw-medium">Have a different question?</span>
-        <Button variant="outline-light" className="rounded-pill px-4 py-3 fs-6 fw-medium">
-          Browse all FAQs
-        </Button>
+        <span className="me-3 text-secondary fs-6 fw-medium">Have a different question?</span>   
+      <CustomButton text="Browse all FAQs" className="fs-6 fw-medium" />
       </div>
     </Container>
   </div></>

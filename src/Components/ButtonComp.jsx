@@ -1,29 +1,10 @@
-const Button = ({
-  label,
-  textColor = 'white',
-  bgColor = 'blue',
-  borderColor,
-  padding = '8px 24px',
-  borderRadius = '6px',
-  onClick,
-}) => {
+import { Button } from "react-bootstrap";
+const CustomButton = ({ text, variant = "outline-light", className = "", style = {}, onClick }) => {
   return (
-    <button
-      onClick={onClick}
-      style={{
-        color: textColor,
-        backgroundColor: bgColor,
-        border: borderColor ? `2px solid ${borderColor}` : 'none',
-        padding: padding,
-        borderRadius: borderRadius,
-        cursor: 'pointer',
-        fontWeight: '500',
-      }}
-    >
-      {label}
-    </button>
+    <Button variant={variant} className={`rounded-pill px-4 py-3 ${className}`} style={style} onClick={onClick}>
+      {text}
+    </Button>
   );
 };
-
-export default Button;
+export default CustomButton;
 
