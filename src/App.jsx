@@ -5,6 +5,7 @@ import Footer from './Components/Footer/Footer'
 import { Route, Routes } from 'react-router'
 import PlanPage from './Components/PlanPage/PlanPage'
 import Header from './Components/Header/Header'
+import LearnPage from './Components/Learn-Page/Learnpge'
 // import productFeatures from './Components/Products/productFeature'
 
 function App() {
@@ -15,9 +16,9 @@ function App() {
       <Header/>
         <Routes>
           <Route path='/'element={<Homepage/>} />
-          <Route path='/solar-plans-and-services' element={<PlanPage/>} />
+          <Route path='/plans' element={<PlanPage/>} />
           {/* <Route path='/products' element={<Products/>} /> */}
-          {/* <Route path='/learn' element={<Learn/>} /> */}
+          <Route path='/learn' element={<LearnPage/>} />
           {/* <Route path='/company' element={<Company/>} /> */}
         </Routes>
         <Footer/>

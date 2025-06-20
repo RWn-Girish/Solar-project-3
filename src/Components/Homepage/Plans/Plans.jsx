@@ -3,7 +3,7 @@ import {  Button } from 'react-bootstrap';
 import './plans.css';
 import planImg from '../../../assets/Images/plans.webp'; 
 import { FaSun } from 'react-icons/fa';
-import CustomButton from '../../ButtonComp';
+import CustomButton from '../../Common Comp/ButtonComp';
 
 const Plans = () => {
   return (

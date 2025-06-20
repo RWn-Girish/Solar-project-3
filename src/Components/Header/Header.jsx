@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Container, Button, Row, Col, Image } from 'react-bootstrap';
 import { FaLocationDot, FaPhone } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/Images/logo2.png';
 import planImg from '../../assets/Images/Plan-img-1.webp';
 import proImg from '../../assets/Images/product-img.webp';
 import learnImg from '../../assets/Images/learn.webp';
 import compImg from '../../assets/Images/Company.webp';
-import CustomButton from '../ButtonComp';
+import CustomButton from '../Common Comp/ButtonComp';
 
 const DropdownMenu = ({ links, image, cta, buttonStyle, titleStyle }) => (
   <div
@@ -26,13 +27,12 @@ const DropdownMenu = ({ links, image, cta, buttonStyle, titleStyle }) => (
         <Col md={4}>
           <h6 className="text-uppercase text-muted mb-3">Explore</h6>
           {links.map((link, index) => (
-            <Nav.Link
-              href={link.href}
+            <div
               key={index}
-              className="border-bottom py-2 ps-0 pe-5 text-dark"
+              className="border-bottom py-2 ps-0 pe-5 text-dark d-block text-decoration-none nav-link"
             >
               {link.label}
-            </Nav.Link>
+            </div>
           ))}
         </Col>
         <Col md={8}>
@@ -87,7 +87,7 @@ const DropdownMenu = ({ links, image, cta, buttonStyle, titleStyle }) => (
   </div>
 );
 
-const HoverNavItem = ({ label, links, image, cta, buttonStyle, titleStyle }) => {
+const HoverNavItem = ({ label, to, links, image, cta, buttonStyle, titleStyle }) => {
   const [show, setShow] = useState(false);
   return (
     <Nav.Item
@@ -95,7 +95,9 @@ const HoverNavItem = ({ label, links, image, cta, buttonStyle, titleStyle }) => 
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
     >
-      <span className="nav-link text-black fw-medium">{label}</span>
+      <Link to={to} className="nav-link text-black fw-medium text-decoration-none">
+        {label}
+      </Link>
       {show && (
         <DropdownMenu
           links={links}
@@ -122,7 +124,9 @@ const Header = () => {
             <div className="d-flex align-items-center top-menu">
               <FaPhone className="me-2" />
               <span>Call us at (833) 324-5886</span>
-              <span className="ms-3">Login</span>
+              <Link to="/login" className="ms-3 text-dark text-decoration-none">
+                Login
+              </Link>
             </div>
           </Nav.Link>
         </Container>
@@ -130,59 +134,54 @@ const Header = () => {
 
       <Container>
         <Navbar expand="lg">
-          <Navbar.Brand href="#" className="fw-bold fs-3">
+          <Link to="/" className="fw-bold fs-3 navbar-brand">
             <img src={logo} alt="logo" style={{ width: '121px' }} />
-          </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="main-navbar" />
           <Navbar.Collapse id="main-navbar" className="justify-content-between">
             <Nav className="mx-auto">
               <HoverNavItem
                 label="Plans & Pricing"
+                to="/plans"
                 links={[
-                  { label: 'Overview', href: '#' },
-                  { label: 'Sunrun Subscription Plan', href: '#' },
-                  { label: 'Owned Plans', href: '#' },
+                  { label: 'Overview' },
+                  { label: 'Sunrun Subscription Plan' },
+                  { label: 'Owned Plans' },
                 ]}
                 image={planImg}
                 cta={{
                   title: 'Hassle-free full service for life with 24/7 monitoring',
                   btnLabel: 'Sunrun Subscription Plan',
                 }}
-                titleStyle={{
-                  fontSize: '32px',
-                  maxWidth:'60%',
-                  fontWeight:'400'
-                }}
+                titleStyle={{ fontSize: '32px', maxWidth: '60%', fontWeight: '400' }}
               />
               <HoverNavItem
                 label="Products"
+                to="/products"
                 links={[
-                  { label: 'Solar Panels', href: '#' },
-                  { label: 'Battery Storage', href: '#' },
-                  { label: 'Tesla Powerwall', href: '#' },
-                  { label: 'Sunrun App', href: '#' },
-                  { label: 'F-150 Lightning', href: '#' },
-                  { label: 'SPAN', href: '#' },
+                  { label: 'Solar Panels' },
+                  { label: 'Battery Storage' },
+                  { label: 'Tesla Powerwall' },
+                  { label: 'Sunrun App' },
+                  { label: 'F-150 Lightning' },
+                  { label: 'SPAN' },
                 ]}
                 image={proImg}
                 cta={{
-                  title: 'Store your power in a backup battery and live life uninteruppted',
+                  title: 'Store your power in a backup battery and live life uninterrupted',
                   btnLabel: 'Battery Storage',
                 }}
-                titleStyle={{
-                  fontSize: '32px',
-                  maxWidth:'60%',
-                  fontWeight:'400'
-                }}
+                titleStyle={{ fontSize: '32px', maxWidth: '60%', fontWeight: '400' }}
               />
               <HoverNavItem
                 label="Learn"
+                to="/learn"
                 links={[
-                  { label: 'Why solar', href: '#' },
-                  { label: 'Sunrun Blog', href: '#' },
-                  { label: 'Solar by State', href: '#' },
-                  { label: 'FAQ', href: '#' },
-                  { label: 'Moving Made Easy', href: '#' },
+                  { label: 'Why solar' },
+                  { label: 'Sunrun Blog' },
+                  { label: 'Solar by State' },
+                  { label: 'FAQ' },
+                  { label: 'Moving Made Easy' },
                 ]}
                 image={learnImg}
                 cta={{
@@ -197,18 +196,19 @@ const Header = () => {
                 titleStyle={{
                   color: '#1F2647',
                   fontSize: '32px',
-                  maxWidth:'60%',
-                  fontWeight:'400'
+                  maxWidth: '60%',
+                  fontWeight: '400',
                 }}
               />
               <HoverNavItem
                 label="Company"
+                to="/company"
                 links={[
-                  { label: 'Why Sunrun', href: '#' },
-                  { label: 'Our Guarantee', href: '#' },
-                  { label: 'Refer a Friend', href: '#' },
-                  { label: 'Carrers', href: '#' },
-                  { label: 'Contact', href: '#' },
+                  { label: 'Why Sunrun' },
+                  { label: 'Our Guarantee' },
+                  { label: 'Refer a Friend' },
+                  { label: 'Careers' },
+                  { label: 'Contact' },
                 ]}
                 image={compImg}
                 cta={{
@@ -223,17 +223,19 @@ const Header = () => {
                 titleStyle={{
                   color: '#1F2647',
                   fontSize: '32px',
-                  maxWidth:'60%'
+                  maxWidth: '60%',
                 }}
               />
             </Nav>
-            <Button
-              variant="light"
-              className="rounded-pill px-4 text-white"
-              style={{ backgroundColor: '#1F2647' }}
-            >
-              Get a quote
-            </Button>
+            <Link to="/quote">
+              <Button
+                variant="light"
+                className="rounded-pill px-4 text-white"
+                style={{ backgroundColor: '#1F2647' }}
+              >
+                Get a quote
+              </Button>
+            </Link>
           </Navbar.Collapse>
         </Navbar>
       </Container>

@@ -1,0 +1,30 @@
+.quote-wrapper {
+  background: linear-gradient(to right, #d6e4ff, #fefaf1);
+  padding: 60px 20px;
+}
+.quote-wrapper h1{ 
+  max-width: 60%;
+  text-align: center;
+}
+.right-panel {
+  background-color: #fffbea;
+}
+.quote-form .form-control {
+  height: 48px;
+  font-size: 1rem;
+}
+.quote-form label {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.quote-form input[type="radio"] {
+  accent-color: black;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.content h4{
+  color: #1F2647!important;
+}
+

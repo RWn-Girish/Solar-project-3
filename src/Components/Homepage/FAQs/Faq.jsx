@@ -1,7 +1,7 @@
 import { Accordion, Button, Col, Container, Row } from "react-bootstrap";
 import { FaChevronRight } from "react-icons/fa";
 import "./FAQ.css";
-import CustomButton from "../../ButtonComp";
+import CustomButton from "../../Common Comp/ButtonComp";
 
 const FAQ = () => {
   const faqs = [

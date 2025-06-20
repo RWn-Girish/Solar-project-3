@@ -1,0 +1,15 @@
+.banner-wrapper {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  max-width: 1520px !important;
+}
+
+.banner-wrapper h1,
+.banner-wrapper p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}

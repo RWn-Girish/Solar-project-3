@@ -1,0 +1,14 @@
+.quote-info p{
+    max-width: 50%;
+}
+
+
+.quote-info img {
+  object-fit: cover;
+  width:500px;
+  height: auto;
+}
+
+.quote-info h5 {
+  max-width: 70%;
+}

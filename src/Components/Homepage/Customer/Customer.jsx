@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import customer from '../../../assets/Images/Videos/customer.mp4'
-import CustomButton from "../../ButtonComp";
+import CustomButton from "../../Common Comp/ButtonComp";
 const Customer=()=>{
     return(
         <>

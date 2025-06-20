@@ -78,14 +78,10 @@
 .faq-accordion-item {
   border-bottom: 1px solid #444 !important;
 }
-
 .faq-accordion-item p {
   margin-bottom: 1rem;
   line-height: 1.6;
 }
-
-
-
 .faq-accordion-item .accordion-body {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;

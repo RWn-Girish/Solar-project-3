@@ -1,7 +1,7 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import Techvdo from '../../../assets/Images/Videos/tech.mp4';
 import Techimg from '../../../assets/Images/tech-img.webp';
-import CustomButton from "../../ButtonComp";
+import CustomButton from "../../Common Comp/ButtonComp";
 
 
 const Technology = () => {
