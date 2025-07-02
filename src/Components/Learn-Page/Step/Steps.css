@@ -1,0 +1,24 @@
+.steps-section {
+  background-color: #fff;
+}
+
+.steps-subheading {
+  color: #666;
+  font-size: 24px;
+  max-width: 600px;
+}
+.step-card img.step-img {
+  width: 600px;
+  height: 337px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+.step-card h5 {
+  font-size: 24px;
+}
+.step-card p {
+  color:gray !important;
+  font-size: 1rem;
+  max-width: 60%;
+}
+

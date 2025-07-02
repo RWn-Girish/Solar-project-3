@@ -1,0 +1,26 @@
+.roof-section {
+  background-color: #fffaf3;
+}
+.roof-fixed-img {
+  width: 600px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.roof-heading {
+ max-width: 90%;
+}
+
+.roof-text {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 80%;
+}
+
+.roof-btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
