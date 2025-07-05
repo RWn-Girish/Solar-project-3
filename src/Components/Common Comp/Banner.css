@@ -13,3 +13,17 @@
 .banner-wrapper p {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
+.outline-dark-rounded {
+  background-color: transparent;
+  color: #000!important;
+  border: 1.5px solid #000 !important;
+  border-radius: 50px;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.outline-dark-rounded:hover {
+  background-color: #000;
+  color: #fff;
+}

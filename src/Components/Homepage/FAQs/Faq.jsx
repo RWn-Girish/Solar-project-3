@@ -1,10 +1,8 @@
-import { Accordion, Button, Col, Container, Row } from "react-bootstrap";
-import { FaChevronRight } from "react-icons/fa";
 import "./FAQ.css";
-import CustomButton from "../../Common Comp/ButtonComp";
+import FAQSection from "../../Common Comp/FAQ/FAQ.JSX";
 
 const FAQ = () => {
-  const faqs = [
+  const homeFaqs = [
     {
       question: "How long do solar panels really last?",
       answer:
@@ -49,67 +47,12 @@ const FAQ = () => {
 
   return (
    <>
-    <div className="faq-section bg-black text-white py-5">
-    <Container style={{ width: "1320px" }}>
-      <h1 className="faq-title mb-4">FAQs</h1>
-      <Row>
-        <Col md={6}>
-          <Accordion flush alwaysOpen={false}>
-            {faqs.slice(0, Math.ceil(faqs.length / 2)).map((faq, index) => (
-              <Accordion.Item
-                key={index}
-                eventKey={index.toString()}
-                className="faq-accordion-item mb-3"
-              >
-                <Accordion.Header className="fs-4">
-                  <div className="fa-icon-wrapper me-2">
-                    <FaChevronRight className="fa-icon" />
-                  </div>
-                  {faq.question}
-                </Accordion.Header>
-                <Accordion.Body className="text-white">
-                  {Array.isArray(faq.answer) ? (
-                    faq.answer.map((para, i) => <p key={i}>{para}</p>)
-                  ) : (
-                    <p>{faq.answer}</p>
-                  )}
-                </Accordion.Body>
-              </Accordion.Item>
-            ))}
-          </Accordion>
-        </Col>
-        <Col md={6}>
-          <Accordion flush alwaysOpen={false}>
-            {faqs.slice(Math.ceil(faqs.length / 2)).map((faq, index) => (
-              <Accordion.Item
-                key={index + Math.ceil(faqs.length / 2)}
-                eventKey={index.toString()}
-                className="faq-accordion-item mb-3"
-              >
-                <Accordion.Header className="fs-4">
-                  <div className="fa-icon-wrapper me-2">
-                    <FaChevronRight className="fa-icon" />
-                  </div>
-                  {faq.question}
-                </Accordion.Header>
-                <Accordion.Body className="text-white">
-                  {Array.isArray(faq.answer) ? (
-                    faq.answer.map((para, i) => <p key={i}>{para}</p>)
-                  ) : (
-                    <p>{faq.answer}</p>
-                  )}
-                </Accordion.Body>
-              </Accordion.Item>
-            ))}
-          </Accordion>
-        </Col>
-      </Row>
-      <div className="d-flex justify-content-center align-items-center mt-4">
-        <span className="me-3 text-secondary fs-6 fw-medium">Have a different question?</span>   
-      <CustomButton text="Browse all FAQs" className="fs-6 fw-medium" />
-      </div>
-    </Container>
-  </div></>
+    <FAQSection
+      title="FAQs"
+      faqs={homeFaqs}
+      theme="dark"
+      showCTA={true}
+    /></>
   );
 };
 

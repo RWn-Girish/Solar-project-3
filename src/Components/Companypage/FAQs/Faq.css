@@ -1,5 +1,4 @@
-/* Homefaq.css */
-
+/* comapny-faq.css */
 
 .faq-section {
   background-color: #0d0d0d;
@@ -22,14 +21,14 @@
 }
 
 .accordion-body {
-  background-color: #000;
-  color: #ffffff;
+  background-color: #fff;
+  color: #000000;
   padding-left: 2rem;
 }
 
 .faq-accordion-item .accordion-button {
   background-color: transparent; 
-  color: white !important;
+  color: black !important;
   font-weight: 500;
 }
 .faq-accordion-item .accordion-button::after {
@@ -37,14 +36,14 @@
 }
 .faq-accordion-item .accordion-button:not(.collapsed) {
   background-color: rgba(255, 255, 255, 0.05);
-  color: white !important;
+  color: black !important;
 }
 .fa-icon-wrapper {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   border: 1px solid white;
-  background-color: white;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +58,7 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: transparent;
-  color: #fff;
+  color: #000;
   box-shadow: none;
 }
 
@@ -89,4 +88,3 @@
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
-

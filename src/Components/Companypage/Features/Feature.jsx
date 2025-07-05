@@ -25,16 +25,13 @@ const features = [
   },
 ];
 
-const HomeFeatures = () => {
+const CompanyFeatures =()=> {
   return (
-    <FeatureSection
-      title="The #1 home solar & battery company in America"
-      features={features}
-      backgroundColor="#0b0c10"
-      textColor="white"
-      variant="cards"
-    />
+    <>
+    <div className='pb-5'>   
+    <FeatureSection title="The Sunrun difference" features={features} backgroundColor="#ffffff" textColor="black"/>
+    </div>
+    </>
   );
-};
-
-export default HomeFeatures;
+}
+export default CompanyFeatures;

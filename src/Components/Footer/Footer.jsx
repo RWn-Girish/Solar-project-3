@@ -11,11 +11,11 @@ const Footer = () => {
         <Row className="mb-4">
           <Col xs={6} md={3}>
             <Nav className="flex-column me-5">
-              <Nav.Link href="#" className='text-decoration-none display-6 border-bottom'><h5>Products</h5></Nav.Link>
-              <Nav.Link href="#" className='text-decoration-none display-6 border-bottom'><h5>Plans & Pricing</h5></Nav.Link>
-              <Nav.Link href="#" className='text-decoration-none display-6 border-bottom'><h5>Learn</h5></Nav.Link>
-              <Nav.Link href="#" className='text-decoration-none display-6 border-bottom'><h5>Company</h5></Nav.Link>
-              <Nav.Link href="#" className='text-decoration-none display-6 border-bottom'><h5>Investors</h5></Nav.Link>
+              <Nav.Link href="/products" className='text-decoration-none display-6 border-bottom'><h5>Products</h5></Nav.Link>
+              <Nav.Link href="/plans" className='text-decoration-none display-6 border-bottom'><h5>Plans & Pricing</h5></Nav.Link>
+              <Nav.Link href="/learn" className='text-decoration-none display-6 border-bottom'><h5>Learn</h5></Nav.Link>
+              <Nav.Link href="/company" className='text-decoration-none display-6 border-bottom'><h5>Company</h5></Nav.Link>
+              <Nav.Link href="/investor" className='text-decoration-none display-6 border-bottom'><h5>Investors</h5></Nav.Link>
             </Nav>
           </Col>
 

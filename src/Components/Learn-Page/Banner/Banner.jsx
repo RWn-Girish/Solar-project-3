@@ -1,7 +1,7 @@
 import Banner from '../../Common Comp/Banner'
 import learnBanner from '../../../assets/Images/Learnbanner.webp';
 
-function LearnBanner() {
+const LearnBanner =() =>{
   return (
     <Banner
       bgImage={learnBanner}
