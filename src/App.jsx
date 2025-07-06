@@ -8,6 +8,7 @@ import Header from './Components/Header/Header'
 import LearnPage from './Components/Learn-Page/Learnpge'
 import Company from './Components/Companypage/Company'
 import FormComp from './Components/Homepage/Form/form'
+import Products from './Components/Products/Products'
 // import productFeatures from './Components/Products/productFeature'
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
           <Route path='/'element={<Homepage/>} />
           <Route path='/plans' element={<PlanPage/>} />
           <Route path="/step2" element={<FormComp />} />
-          {/* <Route path='/products' element={<Products/>} /> */}
+          <Route path='/products' element={<Products/>} />
           <Route path='/learn' element={<LearnPage/>} />
           <Route path='/company' element={<Company/>} />
         </Routes>

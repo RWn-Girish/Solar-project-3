@@ -1,0 +1,15 @@
+.feature-image{
+   border-radius: 12px;
+  height: 300px;
+  width: 460px;
+  /* height: 100vh; */
+  background-position: center;
+  object-fit: cover;
+  /* width: 100%; */
+}
+
+.feature-title{
+    /* color: rgb(73, 81, 125); */
+    font-size: 26px;
+    
+}

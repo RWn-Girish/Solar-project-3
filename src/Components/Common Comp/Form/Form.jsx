@@ -5,7 +5,7 @@ import logo from "../../../assets/Images/logo2.png";
 import CustomButton from "../ButtonComp";
 import "./Form.css";
 
-const QuoteForm = ({ heading = "Go solar with confidence", p = "Upgrade your home with solar and battery storage, and get expert installation from America’s #1 provider." }) => {
+const QuoteForm = ({ heading , p ,Quection,experts }) => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -143,6 +143,10 @@ const QuoteForm = ({ heading = "Go solar with confidence", p = "Upgrade your hom
             }} />
           </div>
         </Modal.Body>
+
+        <div className="text-center py-3" style={{ backgroundColor: '#f8f9fa' }}>
+            <p>{Quection}<a href="#">{experts}</a></p>
+        </div>
       </Modal>
     </>
   );

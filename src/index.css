@@ -1,3 +1,14 @@
-body{
-    font-family: Roobert, sans-serif !important;
+
+/* @font-face {
+  font-family: 'Roobert';
+  src: url('/path-to-your-fonts/Roobert-Regular.woff2') format('woff2'),
+       url('/path-to-your-fonts/Roobert-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+} */
+
+body {
+  font-family: 'Rubik', sans-serif !important;
+  background:#fffcf5;
 }

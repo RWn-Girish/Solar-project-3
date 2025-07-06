@@ -1,0 +1,16 @@
+.plan-feature-section {
+  background-color: #fefcf8;
+}
+
+.image-box {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent);
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  min-height: 300px;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+  height: 100%;
+}

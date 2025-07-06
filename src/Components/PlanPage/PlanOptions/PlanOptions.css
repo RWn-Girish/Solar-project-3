@@ -1,0 +1,21 @@
+.plan-image {
+  border-radius: 12px;
+  height: 300px;
+  width: 400px;
+  /* height: 100vh; */
+  background-position: center;
+  object-fit: cover;
+  /* width: 100%; */
+  
+}
+
+
+
+.plan-text {
+  color: rgb(73, 81, 125);
+}
+.PlanOption-Card:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  color: #1f2647;
+}
