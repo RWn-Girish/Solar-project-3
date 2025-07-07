@@ -57,7 +57,7 @@ const ModernLiving = () => {
 
   return (
     <div className="modern-living-section py-5">
-      <Container className="pe-0 me-0">
+      <Container className="">
         <h1 className="display-4 fw-medium mb-5 ms-5 " style={{maxWidth:"40%",}}>
           Power modern living with Sunrun
         </h1>
