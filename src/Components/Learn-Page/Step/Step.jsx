@@ -41,7 +41,7 @@ const Steps = () => {
         </div>
         <Row className="g-4">
           {steps.map((step, index) => (
-            <Col md={6} key={index}>
+            <Col md={6} xs={12} key={index}>
               <div className="step-card">
                 <img src={step.img} alt={step.title} className="step-img" />
                 <h5 className="mt-3 fw-medium">{step.title}</h5>

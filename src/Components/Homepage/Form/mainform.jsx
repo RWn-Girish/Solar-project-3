@@ -53,7 +53,8 @@ const MainForm = () => {
                 </div>
               </Form.Group>
                 <Button style={{backgroundColor: isFormValid() ? "#1F2647" : "#6c757d", 
-                  borderColor: isFormValid() ? "#1F2647" :"#6c757d",}}type="submit"disabled={!isFormValid()}className="rounded-pill px-5 py-3">
+                  borderColor: isFormValid() ? "#1F2647" :"#6c757d",}}type="submit"disabled={!isFormValid()} 
+                  className="rounded-pill px-5 py-3 mb-4 mb-lg-3" onClick={handleNext}>
                 Next</Button>
             </Form>
           </Col>

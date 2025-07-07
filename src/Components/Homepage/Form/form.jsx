@@ -62,7 +62,7 @@ const FormComp = () => {
     <div className="quote py-5" style={{ backgroundColor: "#fefaf2", display: "flex", alignItems: "center" }}>
       <Container style={{ width: "1320px" }}>
         <Row className="align-items-center">
-          <Col lg={6}>
+          <Col lg={6} md={12}>
             <div className="quote-head mb-4 mt-3">
               <span className="text-uppercase small">Step 2 of 2</span>
               <h1 className="display-4 fw-bold mt-2 mb-4" style={{ maxWidth: "80%" }}>
@@ -71,7 +71,7 @@ const FormComp = () => {
               <h5 className="fs-4 fw-normal text-secondary">Enter contact details to send you quote:</h5>
             </div>
             <Form className="quote-form" onSubmit={handleSubmit}>
-              <Form.Group className="mb-4" style={{ maxWidth: "95%",borderRadius:"10px" }}>
+              <Form.Group className="mb-5 mb-lg-0" style={{ maxWidth: "95%",borderRadius:"10px" }}>
                 <Form.Label>Full name</Form.Label>
                 <Form.Control type="text"style={{ height: "60px",borderRadius:"10px" }}value={fullName}onChange={(e) => 
                   setFullName(e.target.value)}isInvalid={fullName !== "" && !isNameValid()}/>
@@ -105,12 +105,22 @@ const FormComp = () => {
                 our Terms of Service.
               </p>
 
-              <Button style={{backgroundColor: isFormValid() ? "#1F2647" : "#6c757d", borderColor: isFormValid() ? "#1F2647" : "#6c757d",}}
-                disabled={!isFormValid()}className="rounded-pill px-5 py-3"type="submit">Submit</Button>
+             <Button
+  style={{
+    backgroundColor: isFormValid() ? "#1F2647" : "#6c757d",
+    borderColor: isFormValid() ? "#1F2647" : "#6c757d",
+  }}
+  disabled={!isFormValid()}
+  className="rounded-pill px-5 py-3 mb-4 mb-lg-3"  // ✅ ADD THIS
+  type="submit"
+>
+  Submit
+</Button>
+
             </Form>
           </Col>
 
-          <Col lg={6}>
+          <Col lg={6} md={12}>
             <div className="quote-img">
               <img src={formImg} alt="formimg-2" width="620" style={{ borderRadius: "20px", maxWidth: "100%" }}/>
             </div>

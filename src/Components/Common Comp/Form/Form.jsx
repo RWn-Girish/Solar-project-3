@@ -48,7 +48,7 @@ const QuoteForm = ({ heading , p ,Quection,experts }) => {
 
   return (
     <>
-      <div className="quote-wrapper d-flex flex-column flex-md-row align-items-center justify-content-center">
+      <div className="quote-wrapper d-flex flex-column flex-lg-row align-items-center justify-content-center">
         <div className="left-panel text-center text-md-start py-5 me-5">
           <h1 className="display-4 fw-semibold">{heading}</h1>
           <p className="text-secondary fs-5 mt-3" style={{ maxWidth: "420px" }}>{p}</p>
@@ -60,14 +60,14 @@ const QuoteForm = ({ heading , p ,Quection,experts }) => {
             <p className="text-muted small mb-4">All fields are required.</p>
 
             <Row>
-              <Col sm={12} xxl={6} className="text-center text-lg-start mb-4 mb-lg-0">
+              <Col md={12} lg={6} className="text-center text-lg-start mb-4 mb-lg-0">
                 <Form.Group className="mb-3 ">
                   <Form.Label>First Name</Form.Label>
                   <Form.Control type="text" name="firstName" value={formData.firstName} onChange={handleChange} isInvalid={!!errors.firstName} />
                   <Form.Control.Feedback type="invalid">{errors.firstName}</Form.Control.Feedback>
                 </Form.Group>
               </Col>
-              <Col sm={12} xxl={6}>
+              <Col md={12} lg={6}>
                 <Form.Group className="mb-3">
                   <Form.Label>Last Name</Form.Label>
                   <Form.Control type="text" name="lastName" value={formData.lastName} onChange={handleChange} isInvalid={!!errors.lastName} />

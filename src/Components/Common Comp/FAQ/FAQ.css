@@ -85,7 +85,7 @@
 }
 
 .faq-section.bg-white .accordion-button:not(.collapsed) {
-  background-color: rgba(0, 0, 0, 0.05); /* light gray background on open */
+  background-color: rgba(0, 0, 0, 0.05); 
   color: black !important;
 }
 

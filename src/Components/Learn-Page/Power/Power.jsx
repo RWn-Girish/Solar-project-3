@@ -36,7 +36,7 @@ const Power = () => {
         </h1>
         <Row className="g-4">
           {powerItems.map((item, index) => (
-            <Col xs={12} sm={6} md={3} key={index}>
+            <Col xs={12} md={6} lg={3} key={index}>
               <div className="power-content h-100 ">
                 <img
                   src={item.img}

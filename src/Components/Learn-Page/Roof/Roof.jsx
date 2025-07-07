@@ -8,13 +8,13 @@ const Roof = () => {
     <div className="roof-section py-5">
       <Container style={{width: '1320px' }}>
         <Row className="align-items-start">
-          <Col md={6}>
+          <Col lg={6} md={12}>
             <div className="roof-img">
   <img src={roof} alt="Aerial rooftops" className="roof-fixed-img" />
 </div>
 
           </Col>
-          <Col md={6}>
+          <Col lg={6} md={12}>
             <h2 className="roof-heading display-3 fw-medium">Real change from the rooftops</h2>
             <p className="roof-text">
               When you power your home with solar panels and backup storage, you're not just cutting costs—you're cutting down on global 

@@ -28,7 +28,7 @@ const Quote = () => {
           </div>
         </div>
         <Row className="g-4">
-          <Col md={6}>
+          <Col lg={6} md={12}>
             <div className="quote-info  rounded overflow-hidden h-100 p-3">
               <img src={quote1} alt="Traditional Power" className=" rounded mb-3"  />
               <h5 className=" fs-4 my-3">Reduce dependence on traditional power</h5>
@@ -37,7 +37,7 @@ const Quote = () => {
               </p>
             </div>
           </Col>
-          <Col md={6}>
+          <Col lg={6} md={12}>
             <div className="quote-info  rounded overflow-hidden  h-100 p-3">
               <img src={quote2} alt="Modern Power" className=" rounded mb-3" />
               <h5 className=" fs-4 my-3">Step into modern power</h5>

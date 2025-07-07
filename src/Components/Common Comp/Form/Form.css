@@ -26,26 +26,11 @@
 .quote-form input[type="radio"] {
   accent-color: black;
 }
-
-
 @media (max-width: 768px) {
-  .quote-wrapper {
-    padding: 2rem 1rem;
-  }
-
-  .quote-wrapper h1 {
-    font-size: 2rem;
-  }
-
-  .right-panel {
-    padding: 2rem 1rem;
-  }
-
-  .modal-body h4 {
-    font-size: 1.5rem;
-  }
-
-  .modal-body p {
-    font-size: 0.95rem;
+  .left-panel {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
+

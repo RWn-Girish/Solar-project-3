@@ -9,7 +9,6 @@ import LearnPage from './Components/Learn-Page/Learnpge'
 import Company from './Components/Companypage/Company'
 import FormComp from './Components/Homepage/Form/form'
 import Products from './Components/Products/Products'
-// import productFeatures from './Components/Products/productFeature'
 
 function App() {
 
@@ -26,7 +25,6 @@ function App() {
           <Route path='/company' element={<Company/>} />
         </Routes>
         <Footer/>
-      {/* <productFeatures/> */}
     </>
   )
 }

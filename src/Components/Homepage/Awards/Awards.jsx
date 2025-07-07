@@ -13,19 +13,19 @@ const Awards = () => {
                     <h1 className="display-5 fw-semibold">Trusted by the Best</h1>
                 </div>
                 <Row className="award-content text-start">
-                    <Col md={3} sm={6} xs={12} className="mb-4">
+                    <Col lg={3} md={6} xs={12} className="mb-4">
                         <img src={award1} alt="Award 1" className="img-fluid mb-4" width={'250px'} height={'200px'} style={{borderRadius:'12px'}}/>
                         <h4 style={{maxWidth:'80%'}}>Consumer Affairs Buyer's Choice Award</h4>
                     </Col>
-                    <Col md={3} sm={6} xs={12} className="mb-4">
+                    <Col lg={3} md={6} xs={12} className="mb-4">
                         <img src={award2} alt="Award 2" className="img-fluid mb-4" width={'250px'} height={'200px'} style={{borderRadius:'12px'}}/>
                         <h4>BBB A+ rated</h4>
                     </Col>
-                    <Col md={3} sm={6} xs={12} className="mb-4">
+                    <Col lg={3} md={6} xs={12} className="mb-4">
                         <img src={award3} alt="Award 3" className="img-fluid mb-4"width={'250px'} height={'200px'} style={{borderRadius:'12px'}} />
                         <h4>Best Company</h4>
                     </Col>
-                    <Col md={3} sm={6} xs={12} className="mb-4">
+                    <Col lg={3} md={6} xs={12} className="mb-4">
                         <img src={award4} alt="Award 4" className="img-fluid mb-4" width={'250px'} height={'200px'} style={{borderRadius:'12px'}}/>
                         <h4>Good Housekeeping</h4>
                     </Col>
