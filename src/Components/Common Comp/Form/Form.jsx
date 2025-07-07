@@ -60,14 +60,14 @@ const QuoteForm = ({ heading , p ,Quection,experts }) => {
             <p className="text-muted small mb-4">All fields are required.</p>
 
             <Row>
-              <Col md={6}>
+              <Col sm={12} xxl={6} className="text-center text-lg-start mb-4 mb-lg-0">
                 <Form.Group className="mb-3 ">
                   <Form.Label>First Name</Form.Label>
                   <Form.Control type="text" name="firstName" value={formData.firstName} onChange={handleChange} isInvalid={!!errors.firstName} />
                   <Form.Control.Feedback type="invalid">{errors.firstName}</Form.Control.Feedback>
                 </Form.Group>
               </Col>
-              <Col md={6}>
+              <Col sm={12} xxl={6}>
                 <Form.Group className="mb-3">
                   <Form.Label>Last Name</Form.Label>
                   <Form.Control type="text" name="lastName" value={formData.lastName} onChange={handleChange} isInvalid={!!errors.lastName} />
@@ -127,22 +127,25 @@ const QuoteForm = ({ heading , p ,Quection,experts }) => {
       </div>
 
       <Modal show={showModal} onHide={() => setShowModal(false)} centered>
-        <Modal.Body className="p-0 bg-white rounded" style={{ width: '600px' }}>
-          <img src={formimg} alt="Success" className="rounded-top" style={{ height: '330px', width: '100%' }} />
-          <div className="py-4 ps-4 text-left content">
-            <img src={logo} alt="logo2" className="img-fluid" width="80" />
-            <h4 className="py-2 display-6 w-75">It’s time to take control of your energy!</h4>
-            <p className="text-secondary w-75">
-              Keep your phone close – a solar advisor will call you soon. We’ll call back if we miss you!
-            </p>
-            <CustomButton text="Call us at 833.386.2912" style={{
-              color: "#fff",
-              backgroundColor: "#1F2647",
-              border: "1px solid",
-              width: '95%'
-            }} />
-          </div>
-        </Modal.Body>
+        <Modal.Body className="p-0 bg-white rounded w-100">
+  <img src={formimg} alt="Success" className="img-fluid rounded-top w-100" style={{ maxHeight: '300px', objectFit: 'cover' }} />
+  <div className="py-4 px-4 text-start">
+    <img src={logo} alt="logo2" className="img-fluid mb-3" width="80" />
+    <h4 className="py-2 display-6">It’s time to take control of your energy!</h4>
+    <p className="text-secondary">
+      Keep your phone close – a solar advisor will call you soon. We’ll call back if we miss you!
+    </p>
+    <CustomButton
+      text="Call us at 833.386.2912"
+      style={{
+        color: "#fff",
+        backgroundColor: "#1F2647",
+        border: "1px solid",
+        width: '100%',
+      }}
+    />
+  </div>
+</Modal.Body>
 
         <div className="text-center py-3" style={{ backgroundColor: '#f8f9fa' }}>
             <p>{Quection}<a href="#">{experts}</a></p>

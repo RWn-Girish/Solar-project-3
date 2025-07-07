@@ -5,10 +5,11 @@ import "./Story.css";
 const Story = () => {
   return (
     <div className="story-section py-5">
-      <Container style={{ width: "1320px" }}>
-        <Row className="align-items-center">
-          <Col md={6}>
-            <div className="story-content pe-md-5">
+      <Container fluid="lg">
+        <Row className="align-items-center gx-5">
+          {/* Text Content */}
+          <Col xs={12} md={6} className="mb-4 mb-md-0">
+            <div className="story-content pe-md-4 text-center text-md-start">
               <p className="story-subtitle text-uppercase text-muted mb-2">Our Story</p>
               <h2 className="story-title mb-4">Lighting the way with clean energy</h2>
               <p className="story-text">
@@ -18,9 +19,15 @@ const Story = () => {
               </p>
             </div>
           </Col>
-          <Col md={6}>
-            <div className="story-img text-center text-md-end mt-4 mt-md-0">
-              <img src={story} alt="Our Story" className="img-fluid rounded-4 shadow-sm" />
+
+          {/* Image */}
+          <Col xs={12} md={6}>
+            <div className="story-img text-center text-md-end">
+              <img
+                src={story}
+                alt="Our Story"
+                className="img-fluid rounded-4 shadow-sm"
+              />
             </div>
           </Col>
         </Row>
@@ -30,3 +37,4 @@ const Story = () => {
 };
 
 export default Story;
+

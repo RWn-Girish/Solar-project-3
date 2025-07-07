@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, Button, Row, Col, Image } from 'react-bootstrap';
 import { FaLocationDot, FaPhone } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
@@ -9,28 +9,28 @@ import learnImg from '../../assets/Images/learn.webp';
 import compImg from '../../assets/Images/Company.webp';
 import CustomButton from '../Common Comp/ButtonComp';
 
+// Hook to check if screen is desktop
+const useIsDesktop = () => {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 992);
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 992);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  return isDesktop;
+};
+
+// Dropdown UI
 const DropdownMenu = ({ links, image, cta, buttonStyle, titleStyle }) => (
-  <div
-    className="shadow-lg bg-white border-top"
-    style={{
-      position: 'fixed',
-      top: '120px',
-      left: 0,
-      right: 0,
-      zIndex: 1000,
-      width: '100vw',
-      padding: '48px 48px',
-    }}
-  >
+  <div className="shadow-lg bg-white border-top" style={{
+    position: 'fixed', top: '120px', left: 0, right: 0, zIndex: 1000, width: '100vw', padding: '48px 48px'
+  }}>
     <Container>
       <Row>
         <Col md={4}>
           <h6 className="text-uppercase text-muted mb-3">Explore</h6>
           {links.map((link, index) => (
-            <div
-              key={index}
-              className="border-bottom py-2 ps-0 pe-5 text-dark d-block text-decoration-none nav-link"
-            >
+            <div key={index} className="border-bottom py-2 ps-0 pe-5 text-dark d-block text-decoration-none nav-link">
               {link.label}
             </div>
           ))}
@@ -38,41 +38,17 @@ const DropdownMenu = ({ links, image, cta, buttonStyle, titleStyle }) => (
         <Col md={8}>
           <div style={{ paddingLeft: '100px' }}>
             <h6 className="text-uppercase text-muted mb-3">Featured</h6>
-            <div
-              style={{
-                width: '80%',
-                height: '500px',
-                overflow: 'hidden',
-                position: 'relative',
-                color: '#fff',
-              }}
-            >
-              <Image
-                src={image}
-                style={{
-                  height: '70%',
-                  width: '100%',
-                  objectFit: 'cover',
-                  borderRadius: '20px',
-                }}
-              />
-              <div
-                style={{
-                  position: 'absolute',
-                  top: '20px',
-                  left: '20px',
-                  color: '#fff',
-                }}
-              >
+            <div style={{
+              width: '80%', height: '500px', overflow: 'hidden',
+              position: 'relative', color: '#fff'
+            }}>
+              <Image src={image} style={{
+                height: '70%', width: '100%', objectFit: 'cover', borderRadius: '20px'
+              }} />
+              <div style={{ position: 'absolute', top: '20px', left: '20px', color: '#fff' }}>
                 <h5 style={{ fontWeight: 600, ...(titleStyle || {}) }}>{cta.title}</h5>
               </div>
-              <div
-                style={{
-                  position: 'absolute',
-                  top: '280px',
-                  left: '20px',
-                }}
-              >
+              <div style={{ position: 'absolute', top: '280px', left: '20px' }}>
                 <CustomButton
                   text={cta.btnLabel}
                   className="px-0 py-0 rounded-pill"
@@ -87,18 +63,22 @@ const DropdownMenu = ({ links, image, cta, buttonStyle, titleStyle }) => (
   </div>
 );
 
+// Hover logic
 const HoverNavItem = ({ label, to, links, image, cta, buttonStyle, titleStyle }) => {
   const [show, setShow] = useState(false);
+  const isDesktop = useIsDesktop();
   return (
-    <Nav.Item
-      className="mx-3 position-relative"
-      onMouseEnter={() => setShow(true)}
-      onMouseLeave={() => setShow(false)}
+    <div
+      className="position-relative hover-nav-wrapper"
+      onMouseEnter={() => isDesktop && setShow(true)}
+      onMouseLeave={() => isDesktop && setShow(false)}
     >
-      <Link to={to} className="nav-link text-black fw-medium text-decoration-none">
-        {label}
-      </Link>
-      {show && (
+      <Nav.Item className="mx-3">
+        <Link to={to} className="nav-link text-black fw-medium text-decoration-none">
+          {label}
+        </Link>
+      </Nav.Item>
+      {isDesktop && show && (
         <DropdownMenu
           links={links}
           image={image}
@@ -107,39 +87,62 @@ const HoverNavItem = ({ label, to, links, image, cta, buttonStyle, titleStyle })
           titleStyle={titleStyle}
         />
       )}
-    </Nav.Item>
+    </div>
   );
 };
 
+// Final Header component
 const Header = () => {
   return (
     <>
+      {/* Top Bar */}
       <div className="top-bar bg-light border-bottom">
         <Container>
           <Nav.Link className="py-3 d-flex justify-content-between align-items-center text-black">
-            <div className="d-flex align-items-center top-menu">
+            <div className="d-flex align-items-center">
               <FaLocationDot className="me-2" />
               <span>Enter your location</span>
             </div>
-            <div className="d-flex align-items-center top-menu">
+            <div className="d-flex align-items-center">
               <FaPhone className="me-2" />
               <span>Call us at (833) 324-5886</span>
-              <Link to="/login" className="ms-3 text-dark text-decoration-none">
-                Login
-              </Link>
+              <Link to="/login" className="ms-3 text-dark text-decoration-none">Login</Link>
             </div>
           </Nav.Link>
         </Container>
       </div>
 
-      <Container>
-        <Navbar expand="lg">
-          <Link to="/" className="fw-bold fs-3 navbar-brand">
-            <img src={logo} alt="logo" style={{ width: '121px' }} />
-          </Link>
-          <Navbar.Toggle aria-controls="main-navbar" />
-          <Navbar.Collapse id="main-navbar" className="justify-content-between">
-            <Nav className="mx-auto">
+      {/* Main Navbar */}
+      <Navbar expand="lg" className="py-3">
+        <Container fluid className="px-3">
+          <div className="d-flex align-items-center justify-content-between w-100">
+            {/* ☰ Toggle - left on mobile */}
+            <Navbar.Toggle aria-controls="main-navbar" className="order-1 p-0 border-0 bg-transparent" />
+
+            {/* Logo - center on mobile, left on desktop */}
+            <Link
+              to="/"
+              className="navbar-brand mx-auto order-2 d-flex align-items-center justify-content-center"
+            >
+              <img src={logo} alt="logo" style={{ width: '100px' }} />
+            </Link>
+
+            {/* "Get a quote" - right on all screens */}
+            <div className="order-3">
+              <Link to="/quote">
+                <Button
+                  className="rounded-pill px-4 text-white"
+                  style={{ backgroundColor: '#1F2647', border: 'none' }}
+                >
+                  Get a quote
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Collapsible Nav Links */}
+          <Navbar.Collapse id="main-navbar" className="mt-3 mt-lg-0">
+            <Nav className="mx-auto mx-lg-0">
               <HoverNavItem
                 label="Plans & Pricing"
                 to="/plans"
@@ -227,20 +230,12 @@ const Header = () => {
                 }}
               />
             </Nav>
-            <Link to="/quote">
-              <Button
-                variant="light"
-                className="rounded-pill px-4 text-white"
-                style={{ backgroundColor: '#1F2647' }}
-              >
-                Get a quote
-              </Button>
-            </Link>
           </Navbar.Collapse>
-        </Navbar>
-      </Container>
+        </Container>
+      </Navbar>
     </>
   );
 };
 
 export default Header;
+

@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className="bg-black text-light pt-5 pb-3 mt-3 ">
       <Container>
         <Row className="mb-4">
-          <Col xs={6} md={3}>
+          <Col xs={6} lg={3}>
             <Nav className="flex-column me-5">
               <Nav.Link href="/products" className='text-decoration-none display-6 border-bottom'><h5>Products</h5></Nav.Link>
               <Nav.Link href="/plans" className='text-decoration-none display-6 border-bottom'><h5>Plans & Pricing</h5></Nav.Link>
@@ -19,7 +19,7 @@ const Footer = () => {
             </Nav>
           </Col>
 
-          <Col xs={6} md={2}>
+          <Col xs={6} lg={2}>
             <h6 className="text-uppercase mb-3 ms-5">Meet Sunrun</h6>
             <Nav className="flex-column ms-5">
               <Nav.Link href="#">Why Sunrun</Nav.Link>
@@ -33,7 +33,7 @@ const Footer = () => {
             </Nav>
           </Col>
 
-          <Col xs={6} md={2}>
+          <Col xs={6} lg={2}>
             <h6 className="text-uppercase mb-3">Customers</h6>
             <Nav className="flex-column">
               <Nav.Link href="#">Account Login</Nav.Link>
@@ -42,7 +42,7 @@ const Footer = () => {
             </Nav>
           </Col>
 
-          <Col xs={6} md={2}>
+          <Col xs={6} lg={2}>
             <h6 className="text-uppercase mb-3">Need Help?</h6>
             <Nav className="flex-column">
               <Nav.Link href="#">Contact Us</Nav.Link>
@@ -52,7 +52,7 @@ const Footer = () => {
             </Nav>
           </Col>
 
-          <Col xs={12} md={3} className="text-md-end  mt-md-0">
+          <Col xs={12} lg={3} className="text-lg-end  mt-lg-0">
             <div className="d-flex justify-content-md-end gap-4 " style={{fontSize:"22px" ,color:'#C3DBFF'}}>
               <a href="#"><FaFacebook  /></a>
               <a href="#"><FaXTwitter  /></a>
@@ -61,15 +61,16 @@ const Footer = () => {
             </div>
           </Col>
         </Row>
-<Row className="mb-2">
+        <Row className="mb-2">
           <Col md={12} className="d-flex flex-wrap gap-3 small my-4">
             <span className="fw-semibold ">Popular pages</span>
-            <a href="#" className=" text-decoration-underline" style={{color:'#C3DBFF' ,fontSize:"14px"}}>Seamless integration solar battery storage</a>
+            <a href="#" className=" text-decoration-underline" style={{color:'#C3DBFF' ,fontSize:"14px"}}>
+              Seamless integration solar battery storage</a>
             <a href="#" className=" text-decoration-underline" style={{color:'#C3DBFF', fontSize:"14px"}}>Latest technology solar panels</a>
-            <a href="#" className=" text-decoration-underline" style={{color:'#C3DBFF' ,fontSize:"14px"}}>Tesla Powerwall solar battery and backup quote</a>
+            <a href="#" className=" text-decoration-underline" style={{color:'#C3DBFF' ,fontSize:"14px"}}>
+              Tesla Powerwall solar battery and backup quote</a>
           </Col>
         </Row>
-
         <Row className="justify-content-between align-items-center small">
           <Col xs="auto" className="d-flex align-items-center gap-4 fs-6">
             <div className="d-flex gap-2 fs-6"style={{color:'#C3dbff'}}>

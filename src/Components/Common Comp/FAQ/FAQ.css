@@ -77,3 +77,51 @@
   color: black;
 }
 
+.faq-section.bg-white,
+.faq-section.bg-white .accordion-body,
+.faq-section.bg-white .accordion-button {
+  color: black !important;
+  background-color: white !important;
+}
+
+.faq-section.bg-white .accordion-button:not(.collapsed) {
+  background-color: rgba(0, 0, 0, 0.05); /* light gray background on open */
+  color: black !important;
+}
+
+.faq-section.bg-white .fa-icon-wrapper {
+  background-color: black;
+  border-color: black;
+}
+
+.faq-section.bg-white .fa-icon {
+  color: white;
+}
+@media (max-width: 992px) {
+  .faq-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .accordion-button {
+    font-size: 1rem !important;
+  }
+
+  .accordion-body {
+    padding-left: 1rem;
+  }
+
+  .fa-icon-wrapper {
+    width: 30px;
+    height: 30px;
+  }
+
+  .fa-icon {
+    font-size: 16px;
+  }
+
+  .faq-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

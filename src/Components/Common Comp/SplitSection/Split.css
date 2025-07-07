@@ -1,0 +1,17 @@
+@media (max-width: 767.98px) {
+  .image-overlay-section h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .image-overlay-section ul {
+    font-size: 1rem;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .image-overlay-section .btn {
+    display: block;
+    margin: 0 auto;
+  }
+}

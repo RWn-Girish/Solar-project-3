@@ -21,25 +21,4 @@ const Solar = () => {
 
 export default Solar;
 
-// import React from "react";
-// import ImageOverlaySection from "../../Common Comp/ImageOverlaySection";
-// import teslaImg from "../../../assets/Images/tesla-storage.webp"; // your image path
 
-// const SolarStorageSection = () => {
-//   return (
-//     <ImageOverlaySection
-//       bgImage={teslaImg}
-//       subtitle="Battery Storage"
-//       title="Solar storage for uninterrupted living"
-//       points={[
-//         "Protected power",
-//         "Energy savings",
-//         "A cleaner future",
-//         "Seamless integration",
-//       ]}
-//       buttonText="Learn more"
-//     />
-//   );
-// };
-
-// export default SolarStorageSection;

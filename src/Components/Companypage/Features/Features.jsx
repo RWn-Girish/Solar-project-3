@@ -1,5 +1,6 @@
 import React from 'react';
-import FeatureSection from '../../Common Comp/FeatureSection';
+import FeatureSection from '../../Common Comp/Features/FeatureSection';
+
 
 const features = [
   {
