@@ -10,7 +10,6 @@ import { StorageItems } from "./Storage/StorageItems";
 import HomeFeatures from "./Storage/Features/feature";
 import FAQ from "./Storage/FAQs/Faq";
 
-
 const Products = () => {
   return (
     <>
@@ -26,19 +25,25 @@ const Products = () => {
         buttonText="Get a quote"
         onButtonClick={() => console.log("Button clicked")}
       />
-      <CleanEnergyFeatures heading="Unlock clean energy for life" features={featuresData} />;
+      <CleanEnergyFeatures
+        heading="Unlock clean energy for life"
+        features={featuresData}
+      />
+      ;
       <SolarPlan
-      image={SolrPlan}
+        image={SolrPlan}
         heading="Premium solar panels"
         subheading="Our solar panels feature high-efficiency photovoltaic cells, ensuring maximum solar energy capture. Each solar panel is crafted for durability, clean aesthetics and energy efficiency—built to withstand the harshest weather conditions."
-        
         buttonText="Get a quote"
         onButtonClick={() => console.log("Button clicked")}
       />
       <PlanForm/>
-      <Storage heading={"Harness the power of solar with battery storage"} features={StorageItems} />
-      <HomeFeatures/>
-      <FAQ/>
+      <Storage
+        heading={"Harness the power of solar with battery storage"}
+        features={StorageItems}
+      />
+      <HomeFeatures />
+      <FAQ />
     </>
   );
 };
