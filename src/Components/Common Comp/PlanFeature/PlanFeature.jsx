@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
-import "./PlanFeature.css"; // optional styles
+import "./PlanFeature.css"; 
 import { FaRegCheckCircle } from "react-icons/fa";
 
 const PlanFeature = ({

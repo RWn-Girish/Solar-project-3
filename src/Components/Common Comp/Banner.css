@@ -1,29 +1,68 @@
 .banner-wrapper {
+  width: 100%;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  background-repeat: no-repeat;
   position: relative;
 }
-
-.container {
-  max-width: 1520px !important;
+.banner-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.banner-heading {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.subheading {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+.small-heading {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.check-item {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+.check-icon {
+  color: #0d6efd;
+  font-size: 1.25rem;
 }
 
-.banner-wrapper h1,
-.banner-wrapper p {
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-}
-.outline-dark-rounded {
-  background-color: transparent;
-  color: #000!important;
-  border: 1.5px solid #000 !important;
-  border-radius: 50px;
-  font-weight: 500;
-  padding: 0.6rem 1.5rem;
-  transition: all 0.3s ease;
-}
 
-.outline-dark-rounded:hover {
-  background-color: #000;
-  color: #fff;
+
+
+@media (max-width: 767.98px) {
+  .banner-heading {
+    font-size: 2rem;
+  }
+
+  .subheading,
+  .check-text {
+    font-size: 1rem;
+  }
+
+  .check-icon {
+    font-size: 1rem;
+  }
+
+  .banner-content {
+    text-align: center !important;
+  }
+
+  .checklist {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  .banner-overlay {
+    padding: 2rem 1rem;
+  }
 }

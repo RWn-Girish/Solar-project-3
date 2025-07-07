@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaSun, FaBolt, FaRegCreditCard, FaHeadset } from 'react-icons/fa';
-import FeatureSection from '../../Common Comp/FeatureSection'; 
+import FeatureSection from '../../Common Comp/Features/FeatureSection';
+
 
 const features = [
   {
