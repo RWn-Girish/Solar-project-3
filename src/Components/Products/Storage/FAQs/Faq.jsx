@@ -51,7 +51,7 @@ const FAQ = () => {
     <FAQSection
       title="FAQs"
       faqs={homeFaqs}
-      theme="dark"
+      theme="light"
       showCTA={true}
     /></>
   );

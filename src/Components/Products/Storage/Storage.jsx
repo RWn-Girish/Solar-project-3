@@ -12,7 +12,7 @@ const Storage = ({ heading, features = [] }) => {
         <Col md={6}/>
         <Row className="g-4">
           {features.map((item, index) => (
-            <Col key={index} xs={12} sm={6} md={3} className="text-center text-md-start">
+            <Col key={index} xs={12} md={6} lg={3} className="text-center text-md-start">
               <Image
                 src={item.image}
                 alt={item.title}

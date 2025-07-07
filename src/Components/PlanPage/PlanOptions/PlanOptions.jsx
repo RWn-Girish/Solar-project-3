@@ -29,7 +29,8 @@ const plans = [
 const PlanOptions = () => {
 
   return (
-    <Container className="my-5">
+    <Container fluid="md" className="my-5">
+
       {/* Top Text Section */}
       <div className="text-center text-lg-start mb-4">
         <p className="fw-bold  small m-0">PICK THE RIGHT PLAN FOR YOU</p>
@@ -42,7 +43,8 @@ const PlanOptions = () => {
       {/* Plan Cards */}
       <Row className="g-4">
         {plans.map((plan, index) => (
-          <Col md={4} key={index}>
+         <Col xl={4} md={6} sm={12} key={index}>
+
         <div className="PlanOption-Card" >
             <div className="text-strat  plan-card p-4">
               <Image src={plan.image} alt={plan.title} rounded className="mb-3 plan-image" />

@@ -9,7 +9,7 @@ const CleanEnergyFeatures = ({ heading, features = [] }) => {
         <h2 className="fw-bold mb-5 text-center text-md-start">{heading}</h2>
         <Row className="g-4">
           {features.map((item, index) => (
-            <Col md={4} key={index} className="text-center text-md-start">
+            <Col lg={4} md={6} sm={12} key={index} className="text-center text-md-start">
               <Image
                 src={item.image}
                 alt={item.title}
